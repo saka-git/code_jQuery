@@ -27,4 +27,13 @@ $(function () {
       300
     );
   });
+
+  //TOPへ戻るボタン
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= 100) {
+      $("#back-btn").css("display", "inline");
+    } else {
+      $("#back-btn").css("display", "none");
+    }
+  });
 });
