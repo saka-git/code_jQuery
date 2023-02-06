@@ -36,4 +36,18 @@ $(function () {
       $("#back-btn").css("display", "none");
     }
   });
+
+  //スクロールをなめらかにする
+  $('a[href^="#"]').on("click", function () {
+    const href = $(this).attr("href");
+    const speed = 500;
+    let target;
+    if (href == "#") {
+      target = $("html");
+    } else {
+      target = $(href);
+    }
+    const position = target.offset().top;
+    $("html, body").animate({ scrollTop: position }, speed, "swing");
+  });
 });
