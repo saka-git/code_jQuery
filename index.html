@@ -47,27 +47,21 @@
     <main>
       <article>
         <!-- カルーセル -->
-        <section id="carousel-section">
-          <div class="carousel">
-            <div>
-              <img
-                src="image/main.png"
-                alt="Canonのカメラ"
-                class="carouselImg"
-              />
-            </div>
-            <div>
-              <img src="image/main2.png" alt="ガジェット" class="carouselImg" />
-            </div>
-            <div>
-              <img
-                src="image/main3.png"
-                alt="海をバックにしたカメラ"
-                class="carouselImg"
-              />
-            </div>
+        <div class="carousel">
+          <div>
+            <img src="image/main.png" alt="Canonのカメラ" class="carouselImg" />
           </div>
-        </section>
+          <div>
+            <img src="image/main2.png" alt="ガジェット" class="carouselImg" />
+          </div>
+          <div>
+            <img
+              src="image/main3.png"
+              alt="海をバックにしたカメラ"
+              class="carouselImg"
+            />
+          </div>
+        </div>
 
         <!-- About -->
         <h1 id="about">About</h1>
@@ -88,18 +82,18 @@
         <h1 id="works">Works</h1>
         <section class="works">
           <div class="item">
-            <img src="image/works1.png" alt="日本海" />
+            <a href=""><img src="image/works1.png" alt="日本海" /></a>
             <p>新潟に訪れた際に、日本海の雄大さを魅了されて撮影した1枚</p>
           </div>
 
           <!-- 左右に隙間を開けるために、"item_center"クラスを付与 -->
           <div class="item item_center">
-            <img src="image/works2.png" alt="冠雪した御嶽山" />
+            <a href=""><img src="image/works2.png" alt="冠雪した御嶽山" /></a>
             <p>地元長野の木曽町から撮影した、冠雪した御嶽山</p>
           </div>
 
           <div class="item">
-            <img src="image/works3.png" alt="京都の街並み" />
+            <a href=""><img src="image/works3.png" alt="京都の街並み" /></a>
             <p>京都で撮影した、明け方の古き良き日本の町並み</p>
           </div>
         </section>
@@ -116,6 +110,13 @@
     ></script>
     <!-- TOPに戻るボタン -->
     <a id="back-btn" href="#">TOP</a>
+
+    <!-- modal -->
+    <div class="modal">
+      <img src="" alt="" class="big-img" />
+      <a href="" class="close-btn">×</a>
+    </div>
+
     <!-- slickの読み込み -->
     <script
       type="text/javascript"

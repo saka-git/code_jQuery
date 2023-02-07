@@ -50,4 +50,30 @@ $(function () {
     const position = target.offset().top;
     $("html, body").animate({ scrollTop: position }, speed, "swing");
   });
+
+  //セクションのフェードイン
+  $(window).scroll(function () {
+    const windowHeight = $(window).height();
+    const scroll = $(window).scrollTop();
+    $("section").each(function () {
+      const targetPosition = $(this).offset().top;
+      if (scroll > targetPosition - windowHeight + 100) {
+        $(this).addClass("fade-in");
+      }
+    });
+  });
+
+  //モータル
+  $(".works img").on("click", function () {
+    const imgSrc = $(this).attr("src");
+    $(".big-img").attr("src", imgSrc);
+    $(".modal").fadeIn();
+    return false;
+  });
+
+  //閉じるボタン
+  $(".close-btn").on("click", function () {
+    $(".modal").fadeOut();
+    return false;
+  });
 });
